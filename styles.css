@@ -997,6 +997,7 @@ section {
   background: #ffffff0d;
   place-items: center;
   border-radius: 3rem;
+  margin: 0 auto;
   position: relative;
 }
 .skill-icon::before {
@@ -2945,6 +2946,9 @@ body.modal-open {
   .project-card .view-more-button{
     padding: 0.4rem 0.6rem;
     font-size: 0.75rem;
+  }
+  .skill-name{
+    font-size: 0.9rem;
   }
 }
 
