@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amlan Mandal-Portfolio</title>
+    <meta name="description" content="Amlan Mandal — AI/ML Enthusiast, Web Developer, Photographer" />
+
+    <!-- External CSS Links for different effects -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- External CSS file of this project -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="Logo"><span class="dot"></span>AMLAN</div>
+            <!-- Marquee Highlights -->
+            <div class="navbar-marquee">
+                <div class="marquee-strip center">
+                    <div style="overflow:hidden; width:100%;">
+                        <div style="display:inline-block;">
+                            <div class="marquee">
+                                <span>CSE Graduate</span>
+                                <span>AI/ML Enthusiast</span>
+                                <span>Web Developer</span>
+                                <span>Photographer</span>
+                                <span>Problem Solver</span>
+                                <span>Cricket Player</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu" id="mainMenu">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#photography">Photography</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button id="open-menu-button"><i class="fa-solid fa-bars"></i></button>
+            <button id="close-menu-button"><i class="fa-solid fa-xmark"></i></button>
+
+            <a class="view-work" href="#projects">View My Work</a>
+        </div>
+    </nav>
+    <!-- MAIN -->
+    <main class="main">
+        <!-- ================== HOME SECTION ====================== -->
+        <section class="container main-container" id="home">
+            <!-- hero section -->
+            <div class="hero" aria-label="hero section">
+                <div class="hero-left">
+                    <h1 data-aos="fade-up" data-aos-delay="150">Hi<span aria-hidden>👋</span>, I'm <span
+                            id="typed-name"></span></h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="300">AI/ML Enthusiast • Web Developer •
+                        Photographer</p>
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="450">
+                        <a class=" btn view-work" href="#projects">View My Work</a>
+                        <a class="btn btn-outline" href="#contact">Contact Me</a>
+                    </div>
+                    <div class="description" data-aos="fade-up" data-aos-delay="600">
+                        <div class="card card-style">
+                            <div class="desc-item">
+                                <span><small class="muted">Degree</small></span>
+                                <span id="desc-item-strong"><strong>B.Tech,CSE</strong></span>
+                            </div>
+                            <div class="strip"></div>
+                            <div class="desc-item">
+                                <span><small class="muted">primary</small></span>
+                                <span id="desc-item-strong"><strong>AI/ML</strong></span>
+                            </div>
+                            <div class="strip"></div>
+                            <div class="desc-item">
+                                <span><small class="muted">Secondary</small></span>
+                                <span id="desc-item-strong"><strong>Web Development</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <!-- left arrow toggle -->
+                    <div class="social-toggle" id="socialToggle">
+                        <!-- Right chevron -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img"
+                            aria-label="Go right">
+                            <title>Open social Links</title>
+                            <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <!-- social media links sidebar -->
+                    <div class="social-links" id="socialLinks">
+                        <a href="https://github.com/Amlan042" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/amlan-mandal-38b34924b/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:mandalamlan456@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="assets/images/my_profile_photo.png" alt="Amlan Mandal">
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-mini" id="profile-mini">Amlan Mandal</div>
+                        <div class="profile-description">AI/ML Enthusiast • Web Developer</div>
+                        <div class="profile-actions">
+                            <a class="btn btn-outline" href="#projects">Projects</a>
+                            <a class="btn btn-outline" href="assets/files/Amlan_Mandal_latest_resume.pdf"
+                                download>Resume<i class="fa-regular fa-circle-down" style="margin-left:0.4rem"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="about-section">
+            <div class="container">
+
+                <!-- Section Title -->
+                <h2 class="section-title" data-aos="fade-up"><span>About</span></h2>
+
+                <div class="about-content">
+
+                    <!-- Left Side (Story + Timeline) -->
+                    <div class="about-left" data-aos="fade-right" data-aos-delay="150">
+                        <p class="about-text">
+                            I'm a Computer Science Engineer passionate about building impactful
+                            solutions in <span class="para-highlight">AI/ML</span> and
+                            <span class="para-highlight">Web Development</span>.
+                            My journey started with curiosity in algorithms and evolved into developing
+                            projects that merge creativity with problem-solving.
+                        </p>
+
+                        <!-- Toggle Bar for different info about me-->
+                        <div class="toggle-bar" data-aos="zoom-in-up" data-aos-delay="300">
+                            <button class="toggle-btn active" data-target="journey">Journey</button>
+                            <button class="toggle-btn" data-target="academics">Academics</button>
+                            <button class="toggle-btn" data-target="experience">Experience</button>
+                        </div>
+
+                        <button id="open-about-toggle-button">Timeline &nbsp;<i
+                                class="fa-solid fa-caret-down"></i></button>
+
+                        <!-- Dynamic Content Container -->
+                        <div class="toggle-content">
+
+                            <!-- My Journey (Default Visible) -->
+                            <div class="content-panel active" id="journey">
+                                <div class="timeline">
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="450">
+                                        <span class="year">2021</span>
+                                        <p class="highlight">Started B.Tech in Computer Science</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="550">
+                                        <span class="year">2022</span>
+                                        <p class="highlight">Learned basics of Programming</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="650">
+                                        <span class="year">2023</span>
+                                        <p class="highlight">Learned basics of AI/ML and Web Development</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="750">
+                                        <span class="year">2024</span>
+                                        <p class="highlight">Started exploring advanced AI/ML concepts</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="850">
+                                        <span class="year">2025</span>
+                                        <p class="highlight">Built AI-based projects like Brain Tumor Segmentation
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Academics -->
+                            <div class="content-panel" id="academics">
+                                <div class="timeline">
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="450">
+                                        <span class="year">2021 - 2025</span>
+                                        <p class="highlight">B.Tech in Computer Science and Engineering, MAKAUT
+                                            University</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="550">
+                                        <span class="year">2019 - 2021</span>
+                                        <p class="highlight">Higher Secondary (Science Stream) - 92%</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="650">
+                                        <span class="year">2017 - 2019</span>
+                                        <p class="highlight">Secondary Education - 90%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience -->
+                            <div class="content-panel" id="experience">
+                                <div class="timeline">
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="450">
+                                        <span class="year">2024</span>
+                                        <p class="highlight">AI Intern at XYZ Labs — worked on Brain Tumor
+                                            Segmentation using U-Net</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="550">
+                                        <span class="year">2023</span>
+                                        <p class="highlight">Web Developer Intern at ABC Tech — built responsive
+                                            Flask-based apps</p>
+                                    </div>
+                                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="650">
+                                        <span class="year">2022</span>
+                                        <p class="highlight">Freelance Projects — created personal portfolio and ML
+                                            mini-projects</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Side (Counters + Fun Facts + Skills) -->
+                    <div class="about-right" data-aos="fade-left">
+
+                        <!-- Counters -->
+                        <div class="counters">
+                            <div class="counter-box gradient-box" data-aos="flip-right">
+                                <div class="pin-wrapper" aria-hidden="true">
+                                    <i class="fa-solid fa-thumbtack"></i>
+                                </div>
+                                <h3 class="counter" data-target="7">0</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="counter-box gradient-box" data-aos="flip-right" data-aos-delay="150">
+                                <div class="pin-wrapper" aria-hidden="true">
+                                    <i class="fa-solid fa-thumbtack"></i>
+                                </div>
+                                <h3 class="counter" data-target="0">0</h3>
+                                <p>Years of Experience</p>
+                            </div>
+                            <div class="counter-box gradient-box" data-aos="flip-right" data-aos-delay="300">
+                                <div class="pin-wrapper" aria-hidden="true">
+                                    <i class="fa-solid fa-thumbtack"></i>
+                                </div>
+                                <h3 class="counter" data-target="0">0</h3>
+                                <p>Companies Worked At</p>
+                            </div>
+                        </div>
+                        <!-- Details -->
+                        <div class="fun-fact gradient-box" data-aos="flip-left">
+                            <div class="pin-wrapper" aria-hidden="true">
+                                <i class="fa-solid fa-thumbtack"></i>
+                            </div>
+                            <p><strong>Address:</strong><span class="para-highlight"> Purba Medinipur, West Bengal,
+                                    India</span></p>
+                            <p><strong>Email:</strong><span class="para-highlight">
+                                    amlanmandal.cse068@gmail.com</span></p>
+                            <p><strong>Contact:</strong><span class="para-highlight"> +91 8388830814</span></p>
+                        </div>
+                        <!-- Fun Facts -->
+                        <div class="fun-fact gradient-box" data-aos="flip-left">
+                            <div class="pin-wrapper" aria-hidden="true">
+                                <i class="fa-solid fa-thumbtack"></i>
+                            </div>
+                            <p><strong>Fun Fact:</strong> I love <span class="para-highlight">Photography</span> 📸,
+                                <span class="para-highlight">Cricket</span> 🏏 and <span class="para-highlight">sci-fi
+                                    movies</span> 🎥.
+                            </p>
+                        </div>
+
+                        <!-- Skills Teaser -->
+                        <div class="skills-teaser" data-aos="zoom-in-up">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                alt="JavaScript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                                alt="Flask">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                alt="Java">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                alt="React">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS SECTION ================= -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="skills-header" data-aos="fade-up" data-aos-delay="150">
+                    <h2 class="section-title skills-title"><span>Skills</span></h2>
+                    <p class="section-subtitle">Explore my technical and creative expertise.</p>
+                </div>
+
+                <!-- Toggle Bar -->
+                <div class="skills-toggle" data-aos="zoom-in-up" data-aos-delay="300">
+                    <button class="skills-toggle-btn active" data-category="programming">Programming</button>
+                    <button class="skills-toggle-btn" data-category="ai">AI & ML</button>
+                    <button class="skills-toggle-btn" data-category="web">Web Development</button>
+                    <button class="skills-toggle-btn" data-category="tools">Tools</button>
+                    <button class="skills-toggle-btn" data-category="fundamentals">Fundamentals</button>
+                    <button class="skills-toggle-btn" data-category="soft">Soft Skills</button>
+                </div>
+
+                <!-- Menu button for smaller devices -->
+                <button id="open-skills-toggle-button" data-aos="zoom-in-up" data-aos-delay="300">Categories &nbsp;<i
+                        class="fa-solid fa-caret-down"></i></button>
+
+                <!-- Skills Grid -->
+                <div class="skills-content">
+                    <div class="skills-grid" id="skillsGrid">
+                        <!-- Skills dynamically injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= PROJECTS SECTION============ -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="project-header" data-aos="fade-up" data-aos-delay="150">
+                    <h2 class="section-title projects-title"><span>Projects</span></h2>
+                    <p class="section-subtitle">Explore my technical and creative expertise.</p>
+                </div>
+
+                <!-- view toggle -->
+                <div class="projects-toggle" data-aos="fade-up" data-aos-delay="300">
+                    <button title="view grid" class="projects-toggle-btn active" data-view="grid"><i
+                            class="fa-solid fa-table-cells"></i></button>
+                    <button title="view list" class="projects-toggle-btn" data-view="list"><i
+                            class="fa-solid fa-list"></i></button>
+                    <button title="view swiper" class="projects-toggle-btn" data-view="swiper"><i
+                            class="fas fa-sliders-h"></i></button>
+                </div>
+
+                <!-- projects container grid-->
+                <div class="projects-container grid-view" id="projectsContainer">
+                    <!-- content dynamically loaded by JS -->
+                </div>
+
+                <!-- container swiper-->
+                <div class="project-swiper-wrapper">
+                    <div class="swiper-button-prev custom-button-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="swiper mySwiper" id="swiperContainer">
+                        <div class="swiper-wrapper" id="viewProjectSwiper"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next custom-button-next"><i class="fas fa-chevron-right"></i></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal pop-up with Swiper -->
+        <div id="projectModal" class="modal">
+            <div class="swiper projects-modal-swiper">
+                <div class="swiper-wrapper" id="modalSwiperWrapper">
+                    <!-- slides injected by JS -->
+                </div>
+                <div class="swiper-button-prev modal-button-prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="swiper-button-next modal-button-next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+
+
+        <!-- =================== Photography Section=================== -->
+        <section id="photography" class="photography-section">
+            <div class="container">
+                <div class="photography-header" data-aos="fade-up" data-aos-delay="150">
+                    <h2 class="section-title photography-title"><span>Photography</span></h2>
+                    <p class="section-subtitle">Capturing moments through my lens 🎞️</p>
+                </div>
+
+                <div class="photo-gallery" data-aos="fade-up" data-aos-delay="300">
+                    <div class="photo-item">
+                        <img src="assets\images\projects\AI-and-ML-projects.png" alt="Nature">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\projects\AI-and-ML-projects.png" alt="Mountains">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\projects\AI-and-ML-projects.png" alt="City">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\projects\educational-site.jpg" alt="Beach">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\projects\educational-site.jpg" alt="Forest">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\my_profile_photo.png" alt="Night Sky">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\my_profile_photo.png" alt="Night Sky">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <img src="assets\images\projects\educational-site.jpg" alt="Forest">
+                        <div class="overlay">
+                            <span>Nature</span>
+                            <div class="modal-links"> <!-- Similar as in the Project Modal popup -->
+                                <a id="demoLink" href="#" target="_blank" title="visit"><i
+                                        class="fa-solid fa-link"></i></a>
+                                <a id="codeLink" href="#" title="download" download><i
+                                        class="fa-regular fa-circle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more-photos">
+                    <a class="view-more-button" href="https://drive.google.com" target="_blank"
+                        style="text-decoration: none;">view more &nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+
+        <!--=============== CONTACT SECTION ===============-->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-header" data-aos="fade-up" data-aos-delay="150">
+                    <h2 class="section-title contacts-title"><span>Contact</span></h2>
+                    <p class="section-subtitle">Let's work together or just say hello 👋</p>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Left: Contact Info -->
+                    <div class="contact-info" data-aos="fade-right" data-aos-delay="300">
+                        <img src="assets/images/contact-me.png" alt="Contact Illustration"
+                            class="contact-illustration" />
+                        <div class="info-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <p>+91 8388830826</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <a href="mailto:amlanmandal@email.com">mandalamlan456@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <p>Kolkata, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <a href="#" target="_blank" class="cs-link" style="border-radius:1.5rem 0 0 1.5rem;"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" target="_blank" class="cs-link" style="margin-left: -5px;"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="#" target="_blank" class="cs-link" style="margin-left: -5px;"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" target="_blank" style="margin-left: -5px; border-radius:0 1.5rem 1.5rem 0;"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="300">
+                        <div class="input-group">
+                            <input type="text" id="fullName" name="fullName" required />
+                            <label for="fullName">Full Name*</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="phNumber" name="phNumber" />
+                            <label for="phNumber">Mobile Number</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required />
+                            <label for="email">Email*</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <label for="message">Your Message*</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+
+                        <p id="formMsg" class="form-msg"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-section" id="footer">
+        <div class="footer-wrapper container">
+
+            <!-- Left: Logo & tagline -->
+            <div class="footer-left">
+                <h2 class="footer-logo">Amlan Mandal</h2>
+                <p class="footer-tagline">AI/ML Enthusiast & Web Developer</p>
+            </div>
+
+            <!-- Center: Quick Links -->
+            <div class="footer-center">
+                <h3 class="footer-title">Quick Links</h3>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#photography">Photography</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Right: Socials -->
+            <div class="footer-right">
+                <h3 class="footer-title">Connect</h3>
+                <div class="footer-socials">
+                    <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Amlan Mandal | All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Email JS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
