@@ -2880,9 +2880,9 @@ body.modal-open {
     font-size: 0.85rem;
   }
   /* Home */
-  /* .hero{
+  .hero{
     padding-top: 0.6rem;
-  } */
+  }
   .hero-left h1{
     font-size: 1.5rem;
   }
