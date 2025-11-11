@@ -850,7 +850,6 @@ document.addEventListener("DOMContentLoaded", () => {
       allowTouchMove: true,
       speed: 500,
       keyboard: { enabled: true },
-      mousewheel: { invert: false, sensitivity: 0.5 },
       effect: "creative",
       creativeEffect: {
         prev: { translate: ["-120%", 0, -500], opacity: 0.4, scale: 0.9 },
@@ -873,6 +872,8 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("modal-arrows-visible");
     }
   });
+
+  modal.addEventListener("scroll", ()=> modal.classList.add("modal-arrows-visible"));
 });
 
 // ===================== CONTACT SECTION =======================
