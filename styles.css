@@ -1329,12 +1329,8 @@ section {
 }
 .modal-arrows-visible .modal-button-next,  /*wnen modal is open*/
 .modal-arrows-visible .modal-button-prev {
-  z-index: 9999 !important;
   opacity: 1 !important;
-  visibility: visible !important;
   pointer-events: auto !important;
-  will-change: transform;
-  backface-visibility: hidden;
   transform: translateY(0);
 }
 

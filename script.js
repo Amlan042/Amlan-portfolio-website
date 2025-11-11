@@ -872,8 +872,6 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("modal-arrows-visible");
     }
   });
-
-  modal.addEventListener("scroll", ()=> modal.classList.add("modal-arrows-visible"));
 });
 
 // ===================== CONTACT SECTION =======================
