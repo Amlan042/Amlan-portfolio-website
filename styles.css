@@ -1279,8 +1279,10 @@ section {
   height: 100%;
   background: rgba(10, 10, 25, 0.9);
   justify-content: center;
-  align-items: center;
-  overflow: auto;
+  align-items: flex-start;
+  padding: 2rem 0;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 /*popup-modal swiper*/
@@ -1339,6 +1341,8 @@ section {
   border-radius: 2rem;
   width: 90%;
   max-width: 1000px;
+  max-height: none;
+  margin: 0 auto;
   position: relative;
   animation: fadeIn 0.4s ease;
 }
@@ -2154,6 +2158,9 @@ body.modal-open {
     box-shadow: 0 0 25px rgba(71, 7, 110, 0.6), 0 0 50px rgba(101, 52, 226, 0.4);
   }
 }
+
+
+
 
 /* ======================== MEDIA QUERIES ===================== */
 
@@ -3212,5 +3219,264 @@ body.modal-open {
   .footer-socials{
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+
+
+
+
+/* ================== PROJECT MODAL RESPONSIVE DESIGN ================== */
+
+/* MQs for handling different heights at different vw */
+@media screen and (max-height: 650px){
+  .modal{
+    padding: 1rem 0;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 694px) and (min-height: 985px){
+  .modal{
+    align-items: center;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 695px) and (max-width:1014px) and (min-height: 1215px){
+  .modal{
+    align-items: center;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1015px) and (min-height: 700px){
+  .modal{
+    align-items: center;
+    padding: 0;
+  }
+}
+
+
+/* ========== MQ1 (≤1220px) ========== */
+@media screen and (max-width: 1220px) {
+  .modal-content {
+    max-width: 850px;
+    padding: 25px;
+  }
+  .modal-flex {
+    gap: 1.5rem;
+  }
+}
+/* ========== MQ2 (≤1125px) ========== */
+@media screen and (max-width: 1125px) {
+  .modal-content {
+    max-width: 780px;
+  }
+  .modal-first-flex{
+    padding: 1rem;
+  }
+  .about-modal-project {
+    padding: 0.8rem 1.2rem;
+  }
+  .modal-links{
+    padding: 0.2rem 0 0.3rem;
+  }
+}
+/* ========== MQ3 (≤1015px) ========== */
+@media screen and (max-width: 1015px) {
+  .modal-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal-first-flex, .modal-second-flex {
+    width: 100%;
+  }
+  .modal-first-flex{
+    animation: none;
+    border: 2px solid #300454;
+  }
+  .modal-first-flex::before{
+    padding: 0;
+    background: none;
+  }
+  .modal-second-flex {
+    padding: 1.5rem 1rem 1rem;
+  }
+  .modal-about-and-link{
+    gap: 1rem;
+  }
+  .projects-modal-swiper .swiper-slide{
+    padding-top: 3rem;
+  }
+  .modal-button-next, .modal-button-prev{
+    top: 1.75rem;
+  }
+  .modal-button-prev, .modal-button-next{
+    width: 25px;
+    height: 25px;
+  }
+  .modal-button-prev i, .modal-button-next i{
+    font-size: 0.75rem;
+  }
+  .modal-button-prev{
+    left: 40%;
+  }
+  .modal-button-next{
+    right: 40%;
+  }
+}
+/* ========== MQ4 (≤975px) ========== */
+@media screen and (max-width: 975px) {
+  .modal-content {
+    padding: 20px;
+  }
+  .about-modal-title {
+    font-size: 0.9rem;
+  }
+  #modalDescription, #modalUsage {
+    font-size: 0.75rem;
+  }
+}
+/* ========== MQ5 (≤915px) ========== */
+@media screen and (max-width: 915px) {
+  .modal-content {
+    width: 95%;
+    border-radius: 1.5rem;
+  }
+  .modal-content::before{
+    border-radius: 1.5rem;
+  }
+  .modal-flex {
+    gap: 1rem;
+  }
+}
+/* ========== MQ6 (≤800px) ========== */
+@media screen and (max-width: 800px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+  .modal-flex {
+    gap: 1rem;
+  }
+}
+/* ========== MQ7 (≤775px) ========== */
+@media screen and (max-width: 775px) {
+  .modal-content {
+    max-width: 95%;
+  }
+  .modal-flex {
+    flex-direction: column;
+  }
+  .modal-first-flex, .modal-second-flex {
+    width: 100%;
+  }
+}
+/* ========== MQ8 (≤695px) ========== */
+@media screen and (max-width: 695px) {
+  .modal-content {
+    padding: 1rem;
+  }
+  .modal-flex {
+    gap: 0.8rem;
+  }
+  .modal-first-flex img {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .tech h4 {
+    font-size: 0.85rem;
+  }
+  .tech-bar span {
+    font-size: 0.65rem;
+  }
+
+}
+/* ========== MQ9 (≤620px) ========== */
+@media screen and (max-width: 620px) {
+  .modal-content {
+    width: 92%;
+  }
+  .modal-links {
+    margin-top: 1rem;
+  }
+}
+/* ========== MQ10 (≤545px) ========== */
+@media screen and (max-width: 545px) {
+  .modal-content {
+    padding: 0.9rem;
+    border-radius: 1rem;
+  }
+  .modal-content::before{
+    border-radius: 1rem;
+  }
+  .modal-first-flex img {
+    width: 100%;
+    max-height: 200px;
+  }
+  .tech {
+    height: auto;
+    padding: 0.8rem;
+  }
+  .modal-about-and-link{
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .modal-links{
+    margin-top: 0;
+  }
+  .about-modal-project:nth-child(2){
+    margin-bottom: 0;
+  }
+  #modalDescription, #modalUsage {
+    font-size: 0.7rem;
+  }
+}
+/* ========== MQ11 (≤470px) ========== */
+@media screen and (max-width: 470px) {
+  .modal{
+    padding: 1rem 0;
+  }
+  .modal-content {
+    width: 93%;
+    padding: 0.8rem;
+  }
+  .modal-flex {
+    gap: 0.5rem;
+  }
+  .modal-first-flex img {
+    border-radius: 0.8rem;
+  }
+  .about-modal-project {
+    padding: 0.6rem 0.9rem;
+  }
+  .about-modal-title {
+    font-size: 0.8rem;
+  }
+  .modal-links a{
+    padding: 0.5rem 0.85rem;
+  }
+}
+/* ========== MQ12 (≤400px) ========== */
+@media screen and (max-width: 400px) {
+  .modal-content {
+    padding: 0.7rem;
+  }
+  .modal-links{
+    padding-bottom:0.3rem;
+  }
+  .tech-bar span {
+    font-size: 0.6rem;
+  }
+  .bar {
+    height: 6px;
+  }
+}
+/* ========== MQ13 (≤330px) ========== */
+@media screen and (max-width: 330px) {
+  .modal-content {
+    width: 90%;
+    padding: 0.6rem;
+  }
+  .modal-first-flex img {
+    max-height: 150px;
   }
 }
