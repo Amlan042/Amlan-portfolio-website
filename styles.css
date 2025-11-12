@@ -3306,11 +3306,17 @@ body.modal-open {
   }
   .projects-modal-swiper .swiper-slide{
     padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .modal-button-next, .modal-button-prev{
     top: 1.75rem;
     width: 25px;
     height: 25px;
+  }
+  .show-bottom-arrows .modal-button-next,
+  .show-bottom-arrows .modal-button-prev {
+    bottom: 0.25rem;
+    top: auto;
   }
   .modal-button-prev i, .modal-button-next i{
     font-size: 0.75rem;
