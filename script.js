@@ -100,6 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1800); // match the PHOTO-INTRO duration
 });
 
+
+
+
 // =================== ABOUT ME ========================
 
 // Toggle bar functionality in the about me section
@@ -196,6 +199,9 @@ window.addEventListener("resize", () => {
     timeLineBtn.classList.remove("active");
   }
 });
+
+
+
 
 // ======================== SKILLS SECTION =========================
 
@@ -537,6 +543,10 @@ window.addEventListener("resize", ()=>{
   }
 });
 
+
+
+
+
 // ====================== PROJECTS SECTION ======================
 
 // Loding the projects
@@ -770,8 +780,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+
+  //Project Modal Handling
   const modal = document.getElementById("projectModal");
   const modalSwiperWrapper = document.getElementById("modalSwiperWrapper");
+
+  //function for reset scroll while opening/swiping to a new modal
+  function resetModalScroll(){
+    if(modal) modal.scrollTo({top: 0, behaviour: "auto"});
+  }
+
 
   let modalSwiper = null;
 
@@ -831,13 +849,14 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         </div>
-  `;
+      `;
 
       modalSwiperWrapper.appendChild(modalSlide);
+      resetModalScroll();
 
       setTimeout(() => {
         modal.classList.add("modal-arrows-visible");
-      }, 600);
+      }, 600);  
     });
 
     if (modalSwiper) modalSwiper.destroy(true, true);
@@ -862,17 +881,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //closing modal when clicking outside modal-content and arrows
   modal.addEventListener("click", (e) => {
     const isCloseBtn = e.target.closest(".close-btn");
-    const isOutsideModalContent = !e.target.closest(".swiper");
+    const isOutsideModalContent = !e.target.closest(".modal-content");
+    const isOutsideNavArrows = !e.target.closest(".modal-button-prev, .modal-button-next");
 
-    if (isCloseBtn || isOutsideModalContent) {
+    if (isCloseBtn || (isOutsideModalContent && isOutsideNavArrows)) {
       modal.style.display = "none";
       document.body.classList.remove("modal-open");
       modal.classList.remove("modal-arrows-visible");
     }
   });
+
+  //Maintaining arrow visibility while modal scrolling
+  if (modal) {
+    const checkScrollPosition = () => {
+      const isSmallWidth = window.innerWidth <= 1015;
+      const scrollTop = modal.scrollTop;
+      const isAtTop = scrollTop < 5;
+      const isAtBottom = scrollTop + modal.clientHeight >= modal.scrollHeight - 20;
+
+      if(isSmallWidth){
+        // Case 1: At the very top → show arrows normally
+        if (isAtTop) {
+          modal.classList.add("modal-arrows-visible");
+          modal.classList.remove("show-bottom-arrows");
+          return;
+        }
+
+        // Case 2: In between top and bottom → hide arrows
+        if (!isAtBottom) {
+          modal.classList.remove("modal-arrows-visible", "show-bottom-arrows");
+          return;
+        }
+
+        // Case 3: At bottom → show arrows at bottom
+        modal.classList.add("show-bottom-arrows", "modal-arrows-visible");
+      }
+    }
+
+    modal.addEventListener("scroll", checkScrollPosition);
+    window.addEventListener("resize", checkScrollPosition);
+  }
 });
+
+
 
 // ===================== CONTACT SECTION =======================
 
@@ -946,6 +1000,9 @@ contactForm.addEventListener("submit", (e) => {
     });
 });
 
+
+
+
 // ===============Footer ===============
 // Dynamically update year
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -967,6 +1024,9 @@ items_menu.forEach((item) => {
     // }, 1000);
   });
 });
+
+
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
